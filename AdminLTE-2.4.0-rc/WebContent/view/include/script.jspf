@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+
+
+<!-- jQuery 3 -->
+<script src="<%= request.getContextPath() %>/resources/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<%= request.getContextPath() %>/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/raphael/raphael.min.js"></script>
+	<script src="<%= request.getContextPath() %>/resources/bower_components/morris.js/morris.min.js"></script>
+	<!-- Sparkline -->
+	<script
+		src="<%= request.getContextPath() %>/resources/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<!-- jvectormap -->
+	<script src="<%= request.getContextPath() %>/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="<%= request.getContextPath() %>/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<!-- jQuery Knob Chart -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+	<!-- daterangepicker -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/moment/min/moment.min.js"></script>
+	<script
+		src="<%= request.getContextPath() %>/resources/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- datepicker -->
+	<script
+		src="<%= request.getContextPath() %>/resources/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+	<!-- Bootstrap WYSIHTML5 -->
+	<script
+		src="<%= request.getContextPath() %>/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- SlimScroll -->
+<script src="<%= request.getContextPath() %>/resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="<%= request.getContextPath() %>/resources/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="<%= request.getContextPath() %>/resources/dist/js/adminlte.min.js"></script>
+<script src="<%= request.getContextPath() %>/resources/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<%= request.getContextPath() %>/resources/dist/js/demo.js"></script>
+
+
+<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/swipe.js"></script>
+  <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/swipe.js"></script>
+  <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/main.js"></script>
+<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
+<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery.cookie.js"></script>  <!-- 쿠키 플러그인 연동 -->
+<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/common.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.sidebar-menu').tree()
+  })
+</script>
+  
