@@ -2,12 +2,18 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-
 <!-- jQuery 3 -->
 <script src="<%= request.getContextPath() %>/resources/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<%= request.getContextPath() %>/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
+	<!-- jQuery UI 1.11.4 -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+	<script>
+		$.widget.bridge('uibutton', $.ui.button);
+	</script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- Morris.js charts -->
 	<script src="<%= request.getContextPath() %>/resources/bower_components/raphael/raphael.min.js"></script>
 	<script src="<%= request.getContextPath() %>/resources/bower_components/morris.js/morris.min.js"></script>
 	<!-- Sparkline -->
@@ -28,22 +34,24 @@
 	<!-- Bootstrap WYSIHTML5 -->
 	<script
 		src="<%= request.getContextPath() %>/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- SlimScroll -->
-<script src="<%= request.getContextPath() %>/resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="<%= request.getContextPath() %>/resources/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="<%= request.getContextPath() %>/resources/dist/js/adminlte.min.js"></script>
-<script src="<%= request.getContextPath() %>/resources/dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<%= request.getContextPath() %>/resources/dist/js/demo.js"></script>
+	<!-- Slimscroll -->
+	<script
+		src="<%= request.getContextPath() %>/resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="<%= request.getContextPath() %>/resources/bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="<%= request.getContextPath() %>/resources/dist/js/adminlte.min.js"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<script src="<%= request.getContextPath() %>/resources/dist/js/pages/dashboard.js"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="<%= request.getContextPath() %>/resources/dist/js/demo.js"></script>
+	<script type="text/javascript" src="<%= request.getContextPath() %>/resources/js/main.js"></script>
 
 
-<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/swipe.js"></script>
   <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/swipe.js"></script>
   <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/main.js"></script>
 <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
-<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+
 <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery.cookie.js"></script>  <!-- 쿠키 플러그인 연동 -->
 <script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/common.js"></script>
 
