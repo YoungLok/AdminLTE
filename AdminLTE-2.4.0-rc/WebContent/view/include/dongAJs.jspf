@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html> 
+<script type="text/javascript" language="javascript"src="<%=  request.getContextPath() %>/resources/pages/examples/js/DataTables/jquery.dataTables.min.js"></script>
+	
+	<script type="text/javascript" class="init">
+	
+$(function(e){
+	var link= "https://rss.donga.com/total.xml"
+	
+
+//변수 g에 크로스 도메인의 데이터를 가져올 수 있도록 구글 주소를 저장하였습니다.
+  //var g="https://ajax.googleapis.com/ajax/services/feed/load?v=2.0&num=10&callback=?&q=";
+  var g = " https://api.rss2json.com/v1/api.json?api_key=zafmvnswz8zblv9t5beikylvv8pbjuzs7jonqdn0&count=100&rss_url=";
+      //$("#news_wrap h2 a").removeClass("on"); //<a>에 "on" class를 삭제합니다.
+  
+      
+     //$(this).addClass("on"); //클릭한 <a>에 class="on"을 생성합니다.
+     
+     
+     function formatDate(d) {
+				var year = "" + d.getFullYear(),
+					month = "" + (d.getMonth() + 1),
+					day = "" + d.getDate(),
+					hour = "" + d.getHours(),
+					minute = "" + d.getMinutes();
+
+				if (month.length < 2) month = "0" + month;
+				if (day.length < 2) day = "0" + day;
+				if (hour.length < 2) hour = "0" + hour;
+				if (minute.length < 2) minute = "0" + minute;
+
+				return year + "-" + month + "-" + day + " " + hour + ":" + minute;
+			};
+  $.ajax({
+        //url:g+$("#tbody a").attr("href"), //요청할 데이터 경로.
+        url:g+link,	
+        dataType: "json", //요청할 데이터에 타입.
+        success: function (data) { //성공적으로 요청했왔을 때...
+        	//obj = JSONtoString(data);
+        	var obj = JSON.stringify(data);
+        	
+        	//$("#news_list").empty(); //<ul>에 하위 요소를 모두 제거합니다.
+           //console.log(data.responseData.feed.entries);
+
+           //$.each(data.responseData.feed.entries,function(i, d){
+           $.each(data.items,function(i, d){          	  
+              
+        	
+              var title=d["title"]; //title 키의 값을 가져옵니다.         
+              var pic= d["thumbnail"];         
+              var lk=d["link"];
+              var aut = d["author"];   
+              var date = formatDate(new Date(new Date(d["pubDate"]).getTime() + 32400000));
+              
+              
+              $("#tbody").append('<tr><td><img src="'+pic+'"></td><td style="font-size:1.5em"><a href="'+lk+'" target="_blank">'
+            		  +title+'</a></td><td style="font-size:1.1em">'+aut+'임의</td><td style="font-size:1.3em">'+date+'</td></tr>');
+              
+              
+              
+           }); // “$.each” 메서드에 종료
+		
+
+        }, // “success: function”에 종료
+        error: function(data){
+        	alert("에러발생하였습니다.");
+        	},
+        complete:function(data) {
+        	$('#example').DataTable({
+				"language" : {
+					"sEmptyTable" : "데이터가 없습니다",
+					"sInfo" : "_START_ - _END_ / _TOTAL_",
+					"sInfoEmpty" : "0 - 0 / 0",
+					"sInfoFiltered" : "(총 _MAX_ 개)",
+					"sInfoPostFix" : "",
+					"sInfoThousands" : ",",
+					"sLengthMenu" : "페이지당 줄수 _MENU_",
+					"sLoadingRecords" : "읽는중...",
+					"sProcessing" : "처리중...",
+					"sSearch" : "검색:",
+					"sZeroRecords" : "검색 결과가 없습니다",
+					"oPaginate" : {
+						"sFirst" : "처음",
+						"sLast" : "마지막",
+						"sNext" : "다음",
+						"sPrevious" : "이전"
+					},
+					"oAria" : {
+						"sSortAscending" : ": 오름차순 정렬",
+						"sSortDescending" : ": 내림차순 정렬"
+					}
+				}
+			});// end of $('#example').DataTable
+   
+        	
+        	
+        	}
+     
+        
+      }); // $.ajax() 메서드에 종료
+
+});
+
+ </script>
