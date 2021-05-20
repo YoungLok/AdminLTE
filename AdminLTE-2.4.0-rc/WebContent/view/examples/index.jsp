@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
+
 <html>
+<%@ include file="../include/loginCheck.jspf" %>
+
 <%@ include file="../include/head.jspf" %>
 
 
@@ -208,7 +212,7 @@
 									<p class="message">
 										<a href="#" class="name"> <small
 											class="text-muted pull-right"><i
-												class="fa fa-clock-o"></i> 5:15</small> <%=request.getParameter("email") %>
+												class="fa fa-clock-o"></i> 5:15</small> <%=cookies.getValue("AUTH")%>
 										</a> I would like to meet you to discuss the latest news about the
 										arrival of the new theme. They say it is going to be one the
 										best themes on the market
