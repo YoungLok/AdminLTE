@@ -54,7 +54,7 @@ $(function(e){
               var date = formatDate(new Date(new Date(d["pubDate"]).getTime() + 32400000));
               
               
-              $("#tbody").append('<tr><td><img src="'+pic+'"></td><td style="font-size:1.5em"><a href="'+lk+'" target="_blank">'
+              $("#tbody").append('<tr><td><img src="'+pic+'"></td><td style="font-size:16px"><a style="font-size:1.3em" href="'+lk+'" target="_blank" >'
             		  +title+'</a></td><td style="font-size:1.1em">'+aut+'임의</td><td style="font-size:1.3em">'+date+'</td></tr>');
               
               
