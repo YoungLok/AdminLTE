@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <!-- jQuery 3 -->
-<script src="<%= request.getContextPath() %>/resources/bower_components/jquery/dist/jquery.min.js"></script>
+
 	<!-- jQuery UI 1.11.4 -->
 	<script src="<%= request.getContextPath() %>/resources/bower_components/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="<%=  request.getContextPath() %>/resources/js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->

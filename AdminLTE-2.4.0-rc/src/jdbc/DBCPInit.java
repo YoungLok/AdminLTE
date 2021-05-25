@@ -36,7 +36,7 @@ public class DBCPInit extends HttpServlet {
 	private void initConnectionPool() {
 		try {
 			String jdbcUrl = 
-					"jdbc:mysql://localhost:3306/chap14?" + 
+					"jdbc:mysql://localhost:3306/guestbook?" + 
 					"useUnicode=true&characterEncoding=utf8";
 			String username = "jspexam";
 			String pw = "jsppw";
@@ -61,9 +61,14 @@ public class DBCPInit extends HttpServlet {
 			Class.forName("org.apache.commons.dbcp2.PoolingDriver");
 			PoolingDriver driver = 
 					(PoolingDriver) DriverManager.getDriver("jdbc:apache:commons:dbcp:");
-			driver.registerPool("chap14", connectionPool);
+			driver.registerPool("guestbook", connectionPool);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	
+	
+	
+	
 }

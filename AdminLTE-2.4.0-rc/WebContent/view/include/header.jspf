@@ -4,33 +4,7 @@
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script>
-function eng(){
-	
-	<% session.setAttribute("lang","en");%>
-	alert("")
-	window.location.href="/AdminLTE-2.4.0-rc/view/examples/index.jsp"
-	   
-};
-function kor(){
-	alert("")
-	<% session.setAttribute("lang","ko");%>
-	window.location.href="/AdminLTE-2.4.0-rc/view/examples/index.jsp"
-};
-  $('#eng:button').on('click',function(){
-   session.setAttribute("lang","en");
-   response.sendRedirect("/AdminLTE-2.4.0-rc/view/examples/index.jsp");
-  });
-  $('.button#kor').on('click',function(){
-	  session.setAttribute("lang", "ko");
-	  response.sendRedirect("/AdminLTE-2.4.0-rc/view/examples/index.jsp");
-  });
-  $(".button#jap").on("click",function(){
-	  $('param.lang').attr('value','jp') ;
-  });
-  
 
-  </script>
   <script type="text/javascript">
  <% String lang = (String)session.getValue("lang");%>
  alert("<%=lang%>");
@@ -385,6 +359,7 @@ function kor(){
             </span>
           </a>
           <ul class="treeview-menu">
+            <li class="active"><a href="<%= request.getContextPath() %>/view/examples/guestBook.jsp"><i class="fa fa-circle-o"></i> 방명록</a></li>
             <li class="active"><a href="<%= request.getContextPath() %>/view/examples/dongA.jsp"><i class="fa fa-circle-o"></i> 동아일보</a></li>
             <li class="active"><a href="<%= request.getContextPath() %>/view/examples/choSun.jsp"><i class="fa fa-circle-o"></i> 조선닷컴</a></li>
             <li><a href="invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
