@@ -5,16 +5,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-  <script type="text/javascript">
- <% String lang = (String)session.getValue("lang");%>
- alert("<%=lang%>");
-</script>
+  
 
-
- <param class=lang  value="en">
-<fmt:setLocale value="<%=lang %>"/>
-<fmt:setBundle var="message" basename="resource.message" />
-<fmt:message bundle="${message}" key="TITLE" var="title" />
  
    
   <header class="main-header">

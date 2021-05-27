@@ -48,3 +48,4 @@
 <link rel="stylesheet" type="text/css" href="<%=  request.getContextPath() %>/resources/css/style.css" /><!-- 터치 슬라이드 스타일(CSS) 연동 -->
 
 </head>
+ <%@page buffer="8192kb" autoFlush="true" %>

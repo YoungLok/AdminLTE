@@ -39,7 +39,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="/AdminLTE-2.4.0-rc/view/login/loginProcess.jsp" method="get">
+    <form action="/AdminLTE-2.4.0-rc/view/login/loginProcess.jsp" method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control"  name="email" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

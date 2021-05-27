@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 
 <html>
-<%@ include file="../include/loginCheck.jspf" %>
+<!-- include file="../include/loginCheck.jspf"  -->
 
 <%@ include file="../include/head.jspf" %>
 
@@ -22,7 +22,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					<fmt:message bundle="${message}" key="DASHBOARD" /> <small>Control panel</small>
+					 <small>Control panel</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -211,7 +211,7 @@
 									<p class="message">
 										<a href="#" class="name"> <small
 											class="text-muted pull-right"><i
-												class="fa fa-clock-o"></i> 5:15</small> <%=cookies.getValue("AUTH")%>
+												class="fa fa-clock-o"></i> 5:15</small> 
 										</a> I would like to meet you to discuss the latest news about the
 										arrival of the new theme. They say it is going to be one the
 										best themes on the market

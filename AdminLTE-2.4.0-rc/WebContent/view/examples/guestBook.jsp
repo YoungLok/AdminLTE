@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 
 <html>
-<%@ include file="../include/loginCheck.jspf" %>
+
 
 
 <%@ include file="../include/head.jspf" %>
