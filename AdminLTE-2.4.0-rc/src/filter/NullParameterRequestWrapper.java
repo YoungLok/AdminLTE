@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequestWrapper;
 
 public class NullParameterRequestWrapper extends HttpServletRequestWrapper {
 
-    private Map<String, String[]> parameterMap = null;
+    private Map<String, String[]> parameterMap = null; 
+    // {"id":"hong","name":"", "member":"2"}
 
     public NullParameterRequestWrapper(HttpServletRequest request) {
         super(request);

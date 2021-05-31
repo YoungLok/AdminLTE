@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class NullParameterFilter implements Filter {
 
-    private String[] parameterNames = null;
+    private String[] parameterNames = null;  //{"id","name"}
 
     @Override
     public void init(FilterConfig config) throws ServletException {
@@ -33,6 +33,7 @@ public class NullParameterFilter implements Filter {
             new NullParameterRequestWrapper((HttpServletRequest) request);
         requestWrapper.checkNull(parameterNames);
 
+        // 다름 필더로 넘긴다.
         chain.doFilter(requestWrapper, response);
     }
 
